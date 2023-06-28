@@ -26,6 +26,10 @@
                 <source>notice.deactivate</source>
                 <target>Dezaktywuj</target>
             </trans-unit>
+            <trans-unit id="message.form_error">
+                <source>message.form_error</source>
+                <target>Błąd formularza</target>
+            </trans-unit>
             <trans-unit id="category.show">
                 <source>category.show</source>
                 <target>Zobacz</target>
