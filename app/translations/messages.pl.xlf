@@ -34,10 +34,6 @@
                 <source>category.edit</source>
                 <target>Edytuj</target>
             </trans-unit>
-            <trans-unit id="message.form_error">
-                <source>message.form_error</source>
-                <target>Błąd formularza</target>
-            </trans-unit>
             <trans-unit id="category.delete">
                 <source>category.delete</source>
                 <target>Usuń</target>

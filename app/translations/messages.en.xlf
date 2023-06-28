@@ -22,10 +22,6 @@
                 <source>notice.activate</source>
                 <target>Activate</target>
             </trans-unit>
-            <trans-unit id="message.form_error">
-                <source>message.form_error</source>
-                <target>Form error</target>
-            </trans-unit>
             <trans-unit id="notice.deactivate">
                 <source>notice.deactivate</source>
                 <target>Deactivate</target>
