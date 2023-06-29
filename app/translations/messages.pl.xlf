@@ -82,6 +82,14 @@
                 <source>title.notice_list</source>
                 <target>Lista ogłoszeń</target>
             </trans-unit>
+            <trans-unit id="title.change.password">
+                <source>title.change.password</source>
+                <target>Zmień hasło</target>
+            </trans-unit>
+            <trans-unit id="title.change.email">
+                <source>title.change.email</source>
+                <target>Zmień email</target>
+            </trans-unit>
             <trans-unit id="title.notice_details">
                 <source>title.notice_details</source>
                 <target>Szczegóły ogłoszenia #%id%</target>
@@ -177,6 +185,14 @@
             <trans-unit id="admin.panel">
                 <source>admin.panel</source>
                 <target>Panel admina</target>
+            </trans-unit>
+            <trans-unit id="admin.email">
+                <source>admin.email</source>
+                <target>Zmień email</target>
+            </trans-unit>
+            <trans-unit id="admin.password">
+                <source>admin.password</source>
+                <target>Zmień hasło</target>
             </trans-unit>
             <trans-unit id="action.back_to_list">
                 <source>action.back_to_list</source>

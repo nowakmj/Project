@@ -52,7 +52,7 @@ class AdminController extends AbstractController
      *
      * @return RedirectResponse|Response the response object
      */
-    #[Route('/admin', name: 'admin_panel')]
+    #[Route('/admin_password', name: 'admin_change_password')]
     public function changePassword(Request $request, UserPasswordHasherInterface $passwordEncoder): RedirectResponse|Response
     {
         $user = $this->getUser();
@@ -68,15 +68,33 @@ class AdminController extends AbstractController
             if (!$passwordEncoder->isPasswordValid($user, $data['currentPassword'])) {
                 $this->addFlash('danger', $this->translator->trans('message.incorrect.password'));
 
-                return $this->redirectToRoute('admin_panel');
+                return $this->redirectToRoute('admin_change_password');
             }
 
             $this->adminService->updatePassword($user, $data['newPassword']);
 
             $this->addFlash('success', $this->translator->trans('password.changed'));
 
-            return $this->redirectToRoute('admin_panel');
+            return $this->redirectToRoute('admin_change_password');
         }
+
+        return $this->render('admin/password.html.twig', [
+            'changePasswordForm' => $changePasswordForm->createView(),
+        ]);
+    }
+
+    /**
+     * Change email action.
+     *
+     * @param Request                     $request         the request object
+     * @param UserPasswordHasherInterface $passwordEncoder the password encoder service
+     *
+     * @return RedirectResponse|Response the response object
+     */
+    #[Route('/admin_email', name: 'admin_change_email')]
+    public function changeEmail(Request $request, UserPasswordHasherInterface $passwordEncoder): RedirectResponse|Response
+    {
+        $user = $this->getUser();
 
         $changeEmailForm = $this->createForm(ChangeEmailType::class);
 
@@ -87,18 +105,17 @@ class AdminController extends AbstractController
             if (!$passwordEncoder->isPasswordValid($user, $data['currentPassword'])) {
                 $this->addFlash('danger', $this->translator->trans('message.incorrect.password'));
 
-                return $this->redirectToRoute('admin_panel');
+                return $this->redirectToRoute('admin_change_email');
             }
 
             $this->adminService->updateEmail($user, $data['newEmail']);
 
             $this->addFlash('success', $this->translator->trans('email.changed'));
 
-            return $this->redirectToRoute('admin_panel');
+            return $this->redirectToRoute('admin_change_email');
         }
 
-        return $this->render('admin/index.html.twig', [
-            'changePasswordForm' => $changePasswordForm->createView(),
+        return $this->render('admin/email.html.twig', [
             'changeEmailForm' => $changeEmailForm->createView(),
         ]);
     }

@@ -114,6 +114,14 @@
                 <source>title.category_details</source>
                 <target>Category details #%id%</target>
             </trans-unit>
+            <trans-unit id="title.change.password">
+                <source>title.change.password</source>
+                <target>Change password</target>
+            </trans-unit>
+            <trans-unit id="title.change.email">
+                <source>title.change.email</source>
+                <target>Change email</target>
+            </trans-unit>
             <trans-unit id="action.show">
                 <source>action.show</source>
                 <target>Show</target>
@@ -169,6 +177,14 @@
             <trans-unit id="admin.panel">
                 <source>admin.panel</source>
                 <target>Admin panel</target>
+            </trans-unit>
+            <trans-unit id="admin.email">
+                <source>admin.email</source>
+                <target>Change email</target>
+            </trans-unit>
+            <trans-unit id="admin.password">
+                <source>admin.password</source>
+                <target>Change password</target>
             </trans-unit>
             <trans-unit id="notice.service">
                 <source>notice.service</source>

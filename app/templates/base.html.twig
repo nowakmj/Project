@@ -26,12 +26,13 @@
                     {% if is_granted('IS_AUTHENTICATED_FULLY') %}
 
                         {% if app.user %}
-                            <a class="nav-link dropdown-toggle" href="{{ url('admin_panel') }}" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="{{ url('admin_change_email') }}" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 {{ app.user.userIdentifier }}
                             </a>
                             <div class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
                                 <a class="dropdown-item" href="{{ url('app_logout') }}">{{ 'action_logout'|trans }}</a>
-                                <a class="dropdown-item" href="{{ url('admin_panel') }}">{{ 'admin.panel'|trans }}</a>
+                                <a class="dropdown-item" href="{{ url('admin_change_email') }}">{{ 'admin.email'|trans }}</a>
+                                <a class="dropdown-item" href="{{ url('admin_change_password') }}">{{ 'admin.password'|trans }}</a>
                             </div>
                         {% endif %}
                     {% else %}

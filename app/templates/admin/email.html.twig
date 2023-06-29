@@ -5,21 +5,7 @@
 {% endblock %}
 
 {% block body %}
-    <h1>{{ 'title.change.details'|trans }}</h1>
-    {{ form_start(changePasswordForm) }}
-    <div class="form-field2">
-        {{ form_label(changePasswordForm.currentPassword) }}
-        <br>
-        {{ form_widget(changePasswordForm.currentPassword) }}
-    </div>
-    <div class="form-field2">
-        {{ form_label(changePasswordForm.newPassword) }}
-        <br>
-        {{ form_widget(changePasswordForm.newPassword) }}
-    </div>
-    <br>
-    {{ form_end(changePasswordForm) }}
-<br>
+    <h1>{{ 'title.change.email'|trans }}</h1>
     {{ form_start(changeEmailForm) }}
     <br>
     <div class="form-field2">

@@ -206,7 +206,7 @@ class NoticeController extends AbstractController
      *
      * @return Response HTTP response
      */
-    #[Route('/{id}/activate', name: 'notice_activate', methods: 'GET')]
+    #[Route('/{id}/activate', name: 'notice_activate', methods: 'PUT')]
     public function activate(Notice $notice): Response
     {
         $this->addFlash(
@@ -226,7 +226,7 @@ class NoticeController extends AbstractController
      *
      * @return Response HTTP response
      */
-    #[Route('/{id}/deactivate', name: 'notice_deactivate', methods: 'GET')]
+    #[Route('/{id}/deactivate', name: 'notice_deactivate', methods: 'PUT')]
     public function deactivate(Notice $notice): Response
     {
         $this->addFlash(

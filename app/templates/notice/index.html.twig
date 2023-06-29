@@ -59,13 +59,15 @@
                         <td>
                         {% if is_granted('ROLE_ADMIN') %}
                             {% if notice.isActive == 0 %}
-                            <a href="{{ url('notice_activate', { id: notice.id }) }}">
-                                <button class="btn btn-outline-success" type="submit">{{ 'notice.activate'|trans }}</button>
-                                </a>
-                                {% else %}
-                                    <a href="{{ url('notice_deactivate', { id: notice.id }) }}">
-                                        <button class="btn btn-outline-warning" type="submit">{{ 'notice.deactivate'|trans }}</button>
-                                    </a>
+                                <form action="{{ url('notice_activate', { 'id': notice.id }) }}" method="POST">
+                                    <input type="hidden" name="_method" value="PUT">
+                                    <button class="btn btn-outline-success" type="submit">{{ 'notice.activate'|trans }}</button>
+                                </form>
+                            {% else %}
+                                <form action="{{ url('notice_deactivate', { 'id': notice.id }) }}" method="POST">
+                                    <input type="hidden" name="_method" value="PUT">
+                                    <button class="btn btn-outline-warning" type="submit">{{ 'notice.deactivate'|trans }}</button>
+                                </form>
                                 {% endif %}
                         {% endif %}
                         </td>
